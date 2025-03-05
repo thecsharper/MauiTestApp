@@ -32,6 +32,13 @@
                 Completed="OnCounterEntryCompleted"
                 HorizontalOptions="Fill" />
 
+            <CarouselView
+                x:Name="CounterCarousel"
+                ItemsSource="{Binding Counters}"
+                ItemTemplate="{StaticResource CounterTemplateSelector}"
+                SemanticProperties.Description="Carousel of counters"
+                HorizontalOptions="Fill" />
+
             <Button
                 x:Name="CounterBtn"
                 Text="Click me" 
