@@ -45,6 +45,18 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <Image x:Name="myImage" 
+                BackgroundColor="Gray"
+                WidthRequest="300"
+                HeightRequest="300"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Pick a picture"
+                Clicked="TakePhoto"
+                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 
