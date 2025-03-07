@@ -48,7 +48,7 @@
                 using Stream sourceStream = await photo.OpenReadAsync();
 
                 // Saving the file in your local storage
-                string localFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+                var localFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
 
                 await sourceStream.CopyToAsync(File.OpenWrite(localFilePath));
             }
