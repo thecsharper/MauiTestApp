@@ -21,7 +21,6 @@
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
 
-
         private void OnCounterEntryCompleted(object sender, EventArgs e)
         {
             count++;
@@ -44,10 +43,8 @@
 
             if (photo != null)
             {
-                // Getting the file result information
                 using Stream sourceStream = await photo.OpenReadAsync();
 
-                // Saving the file in your local storage
                 var localFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
 
                 await sourceStream.CopyToAsync(File.OpenWrite(localFilePath));
